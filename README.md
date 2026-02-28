@@ -1,6 +1,6 @@
 # 🌌 FundWatcher: Campus Web3
 
-**A decentralized application (dApp) bringing transparency, immutability, and efficiency to campus budget disbursements.** Built for the **Weilliptic Hackathon - Xpecto'26**.
+**A decentralized application (dApp) bringing transparency, immutability, and efficiency to campus budget disbursements.** Built for the **Hack JMI**.
 
 [![Live Demo](https://img.shields.io/badge/Live_Demo-Vercel-black?style=for-the-badge&logo=vercel)](https://fundwatcher.vercel.app/)
 [![Polygon Amoy](https://img.shields.io/badge/Network-Polygon_Amoy-8247E5?style=for-the-badge&logo=polygon)](https://amoy.polygonscan.com/)
