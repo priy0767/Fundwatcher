@@ -1,38 +1,113 @@
 # 🌌 FundWatcher: Campus Web3
 
-**A decentralized application (dApp) bringing transparency, immutability, and efficiency to campus budget disbursements.** Built for the **Hack JMI**.
+**A decentralized application (dApp) bringing transparency, immutability, and efficiency to campus budget disbursements.**  
+Built for **Hack JMI 2026**.
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-Vercel-black?style=for-the-badge&logo=vercel)](https://fundwatcher.vercel.app/)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Vercel-black?style=for-the-badge&logo=vercel)](https://[YOUR_VERCEL_LINK_HERE])
 [![Polygon Amoy](https://img.shields.io/badge/Network-Polygon_Amoy-8247E5?style=for-the-badge&logo=polygon)](https://amoy.polygonscan.com/)
 
 ---
 
 ## 📖 Overview
-Managing student club budgets often involves opaque approval processes and delayed fund transfers. FundWatcher solves this by replacing traditional university ledgers with a transparent smart contract on the Polygon blockchain. 
 
-Student leaders submit project proposals on-chain, and university administrators use a secure, cryptographic portal to review and disburse actual tokens with a single click. 
+Managing student club budgets in universities often involves unclear approvals, delays, and lack of accountability.
 
+**FundWatcher** solves this by introducing a **blockchain-powered funding system** where every transaction is transparent, verifiable, and immutable.
 
+Student leaders can submit funding proposals, and university admins can securely approve and release funds — all recorded on-chain.
+
+---
 
 ## ✨ Key Features
-* **Role-Based Access Control:** Only the wallet that deployed the contract (University Admin) has the cryptographic authority to approve funds.
-* **On-Chain Financial Truth:** The core financial data (Proposer address, requested token amount, and approval status) is processed directly on the Polygon Amoy testnet.
-* **Gas-Optimized Architecture:** To keep transaction costs near zero for students, "heavy" metadata (like detailed text descriptions) is kept off-chain via localized storage, while the financial truth is anchored on-chain.
-* **Dynamic Tech-Noir UI:** A custom, fully responsive cyberpunk interface built with Tailwind CSS, featuring glassmorphism, dynamic wallet status indicators, and real-time blockchain state syncing.
+
+- 🔐 **Role-Based Access Control**  
+  Only the contract deployer (Admin) can approve and release funds.
+
+- ⛓️ **On-Chain Transparency**  
+  Proposal details like wallet address, requested amount, and approval status are stored on the blockchain.
+
+- ⚡ **Low Gas Architecture**  
+  Heavy data stored off-chain, keeping transactions fast and cost-efficient.
+
+- 🎨 **Modern Cyberpunk UI**  
+  Responsive UI with real-time blockchain updates, wallet detection, and glassmorphism design.
+
+---
 
 ## 🛠️ Tech Stack
-* **Frontend:** React.js, Vite, Tailwind CSS
-* **Web3 Integration:** Ethers.js (v6), MetaMask Provider
-* **Smart Contract:** Solidity
-* **Blockchain Network:** Polygon Amoy Testnet
-* **Deployment:** Vercel (Frontend), Hardhat Ignition (Contract)
 
-## 🧠 Technical Highlights & Problem Solving
-During development on the Polygon Amoy testnet, standard Ethers.js gas estimations resulted in `transaction gas price below minimum` rejections. This was solved by hardcoding specific gas parameters into the transaction calls to meet Amoy's updated network requirements:
+- **Frontend:** React.js, Vite, Tailwind CSS  
+- **Web3:** Ethers.js (v6), MetaMask  
+- **Smart Contracts:** Solidity  
+- **Network:** Polygon Amoy Testnet  
+- **Deployment:** Vercel + Hardhat Ignition  
+
+---
+
+## 🧠 Technical Highlight
+
+While deploying on Polygon Amoy, default gas estimation caused errors:
+
+```
+transaction gas price below minimum
+```
+
+### ✅ Fix
 
 ```javascript
-// Forcing 30 Gwei to ensure network acceptance on Polygon Amoy
 const tx = await contract.submitProposal(amountInWei, {
-    maxFeePerGas: ethers.parseUnits("30", "gwei"),
-    maxPriorityFeePerGas: ethers.parseUnits("30", "gwei")
+  maxFeePerGas: ethers.parseUnits("30", "gwei"),
+  maxPriorityFeePerGas: ethers.parseUnits("30", "gwei")
 });
+```
+
+---
+
+## 🚀 Live Demo & Testing
+
+🔗 **Live App:** [Insert Your Vercel Link]
+
+### 🧪 How to Test
+
+1. Install MetaMask  
+2. Switch to **Polygon Amoy Testnet**
+
+### 🔄 Flow
+
+- 👤 Submit proposal (any wallet with test tokens)
+- 🛡️ Admin logs in (deployer wallet)
+- 💸 Click **Approve & Release Funds**
+- ✅ Status updates instantly on UI
+
+---
+
+## 💻 Run Locally
+
+```bash
+git clone https://github.com/priy0767/Fundwatcher.git
+cd client
+npm install
+npm run dev
+```
+
+---
+
+## 👨‍💻 Developer
+
+**Priyanshu Soni**  
+PSIT Kanpur  
+
+Built for **Hack JMI 2026**
+
+---
+
+## 🚀 Future Scope
+
+- 📊 Analytics dashboard for fund tracking  
+- 🏫 Multi-university deployment  
+- 🔔 Notification system  
+- 📱 Mobile app version  
+
+---
+
+🔥 *Need a winning 2-minute pitch for Hack JMI? I can craft one that impresses judges.*
