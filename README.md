@@ -110,4 +110,4 @@ Built for **Hack JMI 2026**
 
 ---
 
-🔥 *Need a winning 2-minute pitch for Hack JMI? I can craft one that impresses judges.*
+
