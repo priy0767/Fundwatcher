@@ -65,7 +65,7 @@ const tx = await contract.submitProposal(amountInWei, {
 
 ## 🚀 Live Demo & Testing
 
-🔗 **Live App:** [Insert Your Vercel Link]
+🔗 **Live App:** [https://fundwatcher.vercel.app/]
 
 ### 🧪 How to Test
 
